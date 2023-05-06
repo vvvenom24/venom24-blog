@@ -1,0 +1,29 @@
+<script>
+    function loadComments() {
+        if (typeof Twikoo === 'undefined') {
+            const getScript = (options) => {
+                const script = document.createElement('script');
+                script.defer = true;
+                script.crossOrigin = 'anonymous';
+                Object.keys(options).forEach((key) => {
+                    script[key] = options[key];
+                });
+                document.body.appendChild(script);
+            };
+            getScript({
+                src: 'https://cdn.jsdelivr.net/npm/twikoo@1.6.16/dist/twikoo.all.min.js',
+                onload: () => {
+                    newTwikoo();
+                }
+            });
+        } else {
+            newTwikoo();
+        }
+    }
+    function newTwikoo() {
+        twikoo.init({
+            el: '#tcomment',
+            envId: '{{ .Site.Params.twikooEnvId }}'
+        });
+    }
+</script>
