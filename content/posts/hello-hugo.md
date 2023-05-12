@@ -1,7 +1,7 @@
 ---
 title: "Hi🎉🎉🎉"
 date: 2023-05-05T11:30:02+08:00
-draft: false
+draft: true
 summary: "这是一篇由chatGPT生成的测试文章用于测试个人博客相关功能与实现，并无实际意义🎈"
 ---
 > 此文章为测试所用，由chatGPT生成

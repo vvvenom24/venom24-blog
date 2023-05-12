@@ -1,0 +1,40 @@
+#memos {
+    display: block;
+    margin: 0 auto;
+    width: 36em;
+}
+
+.index-talk {
+    display: flex;
+    flex: 1 auto;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
+.talk-list {
+    padding-left: 0px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.talk-list li {
+    list-style: none;
+    margin-bottom: 10px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline;
+    vertical-align: middle;
+}
+
+.talk-list li:not(:first-child) {
+    display: none !important;
+}
+
+.talk-list li a:hover {
+    text-decoration: none;
+    color: #1890ff;
+}
