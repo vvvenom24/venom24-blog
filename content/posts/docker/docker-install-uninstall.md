@@ -1,9 +1,9 @@
 ---
-title: "Docker的安装与卸载"
+title: "Docker 的安装与卸载"
 date: 2022-11-24T11:29:32+08:00
 draft: false
 series: [Docker]
-tags: [docker]
+tags: [Docker]
 summary: "在Ubuntu 18.04.6 LTS上安装docker的步骤。首先需要删除旧版本，然后获取软件最新源，安装apt依赖包，安装GPG证书，设置稳定版仓库，最后安装Docker Engine-Community。如果需要卸载，需要删除安装包、相关配置文件和插件。如果在国外服务器上安装，需要卸载当前版本，然后安装官网提供的最新版或选择特定版本进行安装"
 ---
 > Operating System：Ubuntu 18.04.6 LTS
