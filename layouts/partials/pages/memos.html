@@ -50,7 +50,6 @@
                         const date = _val(el.dateTime) || _val(el.title) || _val(el.innerHTML) || 0;
                         if (!date) return;
                         el.title = new Date(+date).toLocaleString("zh-CN");
-                        console.log(el.innerHTML);
                         const i = el.innerHTML.indexOf(';');
                         if (i > 0) {
                             el.innerHTML = el.innerHTML.substring(0, i+1) + format(+date);
@@ -82,10 +81,10 @@
                 .replace(/\!\[[\s\S]*?\]\([\s\S]*?\)/g, "🌅") //全局匹配图片
                 .replace(/\[[\s\S]*?\]\([\s\S]*?\)/g, "🔗") //全局匹配连接
                 .replace(/\bhttps?:\/\/(?!\S+(?:jpe?g|png|bmp|gif|webp|jfif|gif))\S+/g, "🔗"); //全局匹配纯文本连接
-            result += `<li class="item"><span class="memosTime" title=${talkTime}></span>： <a href="https://venom-memos.zeabur.app">${newtalkContent}</a></li>`;
+            result += `<li class="item"><span class="memosTime" title=${talkTime}></span>： <a href="https://venom-memos.zeabur.app" target="_blank">${newtalkContent}</a></li>`;
         }
         var talkDom = document.querySelector("#memos");
-        var talkBefore = `<img title="Memos" style="width: 1.7em; float: left; position: relative; top: 2px;" src="icons/tg.gif"></img><div class="talk-wrap"><ul class="talk-list">`;
+        var talkBefore = `<img title="Memos" style="width: 1.7em; float: left; position: relative; top: 1px;" src="icons/tg.gif"></img><div class="talk-wrap"><ul class="talk-list">`;
         var talkAfter = `</ul></div>`;
         resultAll = talkBefore + result + talkAfter;
         talkDom.innerHTML = resultAll;
