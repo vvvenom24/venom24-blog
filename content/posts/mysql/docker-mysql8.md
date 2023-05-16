@@ -1,10 +1,10 @@
 ---
-title: "Docker Compose 安装Mysql8"
-date: 2023-05-15T19:05:29+08:00
+title: "Docker Compose 安装 MySQL8"
+date: 2022-12-15T19:05:29+08:00
 draft: false
-series: [Docker]
-tags: [Docker,Mysql]
-summary: "本文介绍了在Ubuntu 18.04.6 LTS操作系统上拉取MySQL镜像、创建相关挂载目录和配置文件、编辑启动的yml文件、启动和验证MySQL容器，并进入容器内登录MySQL。"
+series: [MySQL]
+tags: [Docker,MySQL]
+summary: "本文介绍了在 Ubuntu 18.04.6 LTS 操作系统上拉取 MySQL 镜像、创建相关挂载目录和配置文件、编辑启动的 yml 文件、启动和验证 MySQL 容器，并进入容器内登录 MySQL。"
 ---
 > Operating System：Ubuntu 18.04.6 LTS
 >
@@ -12,7 +12,7 @@ summary: "本文介绍了在Ubuntu 18.04.6 LTS操作系统上拉取MySQL镜像�
 >
 > Architecture：x86-64
 
-## 拉取MySQL镜像
+## 拉取 MySQL 镜像
 
 ```bash
 root@ubuntu:~# docker pull mysql:8.0.31
@@ -26,13 +26,13 @@ REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
 mysql        8.0.31    3842e9cdffd2   8 days ago   538MB
 ```
 
-## 创建MySQL相关挂载目录
+## 创建 MySQL 相关挂载目录
 
 ```bash
 root@ubuntu:~# mkdir -p mysql/data mysql/conf mysql/log mysql/mysql-files
 ```
 
-## 创建MySQL配置文件
+## 创建 MySQL 配置文件
 
 ```shell
 root@ubuntu:~# vim mysql/conf/my.cnf
@@ -62,7 +62,7 @@ default-character-set=utf8
 #!includedir /etc/mysql/conf.d/
 ```
 
-## 编辑MySQL启动的yml文件
+## 编辑 MySQL 启动的 yml 文件
 
 ```yaml
 mysql:
@@ -110,7 +110,7 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS  
 root@ubuntu:~# docker exec -it mysql bash
 ```
 
-登录mysql
+登录 mysql
 
 ```shell
 bash-4.4# mysql -uroot -p

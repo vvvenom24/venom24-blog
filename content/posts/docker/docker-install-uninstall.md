@@ -4,7 +4,7 @@ date: 2022-11-24T11:29:32+08:00
 draft: false
 series: [Docker]
 tags: [Docker]
-summary: "在Ubuntu 18.04.6 LTS上安装docker的步骤。首先需要删除旧版本，然后获取软件最新源，安装apt依赖包，安装GPG证书，设置稳定版仓库，最后安装Docker Engine-Community。如果需要卸载，需要删除安装包、相关配置文件和插件。如果在国外服务器上安装，需要卸载当前版本，然后安装官网提供的最新版或选择特定版本进行安装"
+summary: "在 Ubuntu 18.04.6 LTS 上安装 docker 的步骤。"
 ---
 > Operating System：Ubuntu 18.04.6 LTS
 >
@@ -12,7 +12,7 @@ summary: "在Ubuntu 18.04.6 LTS上安装docker的步骤。首先需要删除旧�
 >
 > Architecture：x86-64
 
-## 安装docker
+## 安装 docker
 
 ### 如果已存在，删除旧版本
 
@@ -26,13 +26,13 @@ root@ubuntu:~# apt-get remove docker docker-engine docker.io containerd runc
 root@ubuntu:~# apt-get update
 ```
 
-### 安装apt依赖包
+### 安装 apt 依赖包
 
 ```shell
 root@ubuntu:~# apt-get -y install apt-transport-https ca-certificates curl software-properties-common
 ```
 
-### 安装GPG证书
+### 安装 GPG 证书
 
 ```shell
 root@ubuntu:~# curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -

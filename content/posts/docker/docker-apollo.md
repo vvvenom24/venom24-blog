@@ -1,10 +1,10 @@
 ---
-title: "Docker Compose 安装携程Apollo"
+title: "Docker Compose 安装携程 Apollo"
 date: 2022-11-25T19:12:59+08:00
 draft: false
 series: [Docker]
 tags: [Docker,Apollo]
-summary: "这是一份在Ubuntu 18.04.6 LTS 操作系统上安装携程分布式配置中心Apollo 的指南。"
+summary: "这是一份在 Ubuntu 18.04.6 LTS 操作系统上安装携程分布式配置中心 Apollo 的指南。"
 ---
 > Operating System：Ubuntu 18.04.6 LTS
 >
@@ -12,19 +12,19 @@ summary: "这是一份在Ubuntu 18.04.6 LTS 操作系统上安装携程分布式
 >
 > Architecture：x86-64
 
-## 获取Apollo Config Service 镜像
+## 获取 Apollo Config Service 镜像
 
 ```shell
 root@ubuntu:~# docker pull apolloconfig/apollo-configservice:latest
 ```
 
-## 获取Apollo Admin Service 镜像
+## 获取 Apollo Admin Service 镜像
 
 ```shell
 root@ubuntu:~# docker pull apolloconfig/apollo-adminservice:latest
 ```
 
-## 获取Apollo Protal 镜像
+## 获取 Apollo Protal 镜像
 
 ```shell
 root@ubuntu:~# docker pull apolloconfig/apollo-portal:latest
@@ -47,13 +47,13 @@ root@ubuntu:~# mkdir -p apollo/configservice/conf apollo/configservice/logs apol
 
 ## 初始化数据库
 
-### 初始化[ApolloConfigDB](https://github.com/apolloconfig/apollo/blob/master/scripts/sql/apolloconfigdb.sql)
+### 初始化 [ApolloConfigDB](https://github.com/apolloconfig/apollo/blob/master/scripts/sql/apolloconfigdb.sql)
 
 ```sql
 source /your_local_path/scripts/sql/apolloconfigdb.sql
 ```
 
-### 初始化[ApolloPortalDB](https://github.com/apolloconfig/apollo/blob/master/scripts/sql/apolloportaldb.sql)
+### 初始化 [ApolloPortalDB](https://github.com/apolloconfig/apollo/blob/master/scripts/sql/apolloportaldb.sql)
 
 ```sql
 source /your_local_path/scripts/sql/apolloportaldb.sql
@@ -143,12 +143,12 @@ source /your_local_path/scripts/sql/apolloportaldb.sql
 
 ### 开放所有端口
 
-`configservice` 服务中包含了`Eureka` 所以它的端口必须开放给其他服务
+`configservice` 服务中包含了 `Eureka` 所以它的端口必须开放给其他服务
 
 `adminservice` 服务提供了配置的查询、更新等等操作，
 
-`portal` 服务是Apollo的配置页面所以端口也是需要开放的
+`portal` 服务是 Apollo 的配置页面所以端口也是需要开放的
 
 ### 云环境部署
 
-`ApolloConfigDB.ServerConfig` 中增加配置`eureka.instance.ip-address：<公网ip>`
+`ApolloConfigDB.ServerConfig` 中增加配置 `eureka.instance.ip-address：<公网ip>`
