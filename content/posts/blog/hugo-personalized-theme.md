@@ -1,6 +1,7 @@
 ---
 title: "个性化 Hugo 主题「MemE」"
 date: 2023-05-17T16:40:12+08:00
+lastmod: 2023-05-17T16:40:12+08:00
 draft: false
 series: [Blog]
 tags: [Blog,Hugo,MemE,Twikoo,Memos]

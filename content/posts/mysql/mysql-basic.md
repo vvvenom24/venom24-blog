@@ -1,6 +1,7 @@
 ---
 title: "MySQL 基础"
 date: 2018-08-29T15:31:42+08:00
+lastmod: 2018-08-29T15:31:42+08:00
 draft: false
 series: [MySQL]
 tags: [MySQL]
@@ -8,8 +9,8 @@ summary: "MySQL 基础概念与操作"
 ---
 ## 连接数据库
 ```mysql
-mysql -u user -p
-//例如：mysql -u root -p
+mysql -u <user> -p
+<password>
 ```
 
 ## 退出连接
@@ -23,17 +24,23 @@ show databases;
 ```
 
 - 创建数据库：
+
 ```mysql
-create database db1 DEFAULT CHARSET utf8 COLLATE utf8_general_ci; #utf8编码
-create database db1 DEFAULT CHARACTER SET gbk COLLATE gbk_chinese_ci; #gbk编码
+-- utf8编码
+create database db1 DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+
+-- gbk编码
+create database db1 DEFAULT CHARACTER SET gbk COLLATE gbk_chinese_ci;
 ```
 
 - 使用数据库：
+
 ```mysql
 use db1;
 ```
 
 - 显示当前使用的数据库中所有表：
+
 ```mysql
 SHOW TABLES;
 ```
@@ -41,22 +48,26 @@ SHOW TABLES;
 ## 用户管理
 
 - 创建用户：
+
 ```mysql
 create user '用户名'@'IP地址' identified by '密码'；
 ```
 
 - 删除用户：
+
 ```mysql
 drop user '用户名'@'IP地址';
 ```
 
 - 修改用户：
+
 ```mysql
 rename user '用户名'@'IP地址'；
 to  '新用户名'@'IP地址'；
 ```
 
 - 修改密码：
+
 ```mysql
 set password for '用户名'@'IP地址' = Password('新密码')；
 ```
@@ -64,6 +75,7 @@ set password for '用户名'@'IP地址' = Password('新密码')；
 **注**：用户权限相关数据保存在 mysql 数据库的 user 表中，所以也可以直接对其进行操作（不建议）
 
 ## 权限管理
+
 mysql 对于权限这块有一下限制：
 
 - all privileges：除 grant 外的所有权限
@@ -143,21 +155,25 @@ mysql 对于权限这块有一下限制：
 - 用户名@%：用户可以在任意IP下访问（默认IP地址为%）
 
 - 查看权限：
+
 ```mysql
 show grants for '用户'@'IP地址'
 ```
 
 - 授权：
+
 ```mysql
 grant 权限 on 数据库.表 to '用户'@'IP地址'
 ```
 
 - 取消授权：
+
 ```mysql
 revoke 权限 on 数据库.表 from '用户名'@'IP地址'
 ```
 
 - 授权实例：
+
 ```mysql
 grant all privileges on db1.tb1 TO '用户名'@'IP'
 
@@ -171,12 +187,17 @@ revoke select on db1.tb1 from '用户名'@'IP'
 ## MySQL 表操作
 
 - 查看表：
+
 ```mysql
-show tables; //查看数据库全部表
-select * from 表名; //查看表所有内容
+-- 查看数据库全部表
+show tables;
+
+-- 查看表所有内容
+select * from 表名;
 ```
 
 - 创建表：
+
 ```mysql
 create table 表名(
     列名  类型  是否可以为空，
@@ -185,6 +206,7 @@ create table 表名(
 ```
 
 - e.g.
+
 ```mysql
 CREATE TABLE 'tab1'(
     'nid' int(11) NOT NULL auto_increment,
@@ -200,17 +222,20 @@ CREATE TABLE 'tab1'(
 > - 主键，一种特殊的唯一索引，不允许有控制，如果主键使用单个列，则它的值必须唯一，如果是多列，则其组合必须唯一。
 
 - 删除表：
+
 ```mysql
 drop table 表名
 ```
 
 - 清空表内容：
+
 ```mysql
 delete from 表名
 trucate table 表名
 ```
 
 - 修改表：
+
 ```mysql
 -- 添加列：
 alter table 表名 add 列名 类型

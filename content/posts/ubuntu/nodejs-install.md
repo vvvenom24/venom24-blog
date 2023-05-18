@@ -1,6 +1,7 @@
 ---
 title: "Ubuntu 安装 Node.js"
 date: 2022-11-23T19:22:07+08:00
+lastmod: 2022-11-23T19:22:07+08:00
 draft: false
 series: [Ubuntu]
 tags: [Ubuntu,Node.js]

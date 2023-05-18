@@ -1,6 +1,7 @@
 ---
 title: "使用 Hugo 创建个人博客"
 date: 2023-05-16T19:29:13+08:00
+lastmod: 2023-05-16T19:29:13+08:00
 draft: false
 series: [Blog]
 tags: [Blog,Hugo]

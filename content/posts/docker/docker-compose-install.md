@@ -1,6 +1,7 @@
 ---
 title: "安装 Docker Compose"
 date: 2022-11-24T19:01:11+08:00
+lastmod: 2022-11-24T19:01:11+08:00
 draft: false
 series: [Docker]
 tags: [Docker]

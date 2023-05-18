@@ -1,6 +1,7 @@
 ---
 title: "Docker Compose 安装 MySQL8"
 date: 2022-12-15T19:05:29+08:00
+lastmod: 2022-12-15T19:05:29+08:00
 draft: false
 series: [MySQL]
 tags: [Docker,MySQL]
