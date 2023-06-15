@@ -1,7 +1,7 @@
 ---
 title: "Idea 中超级好用的「后缀补全」"
 date: 2023-06-15T17:23:33+08:00
-lastmod: 2023-06-15T17:23:33+08:00
+lastmod: 2023-06-15T18:40:33+08:00
 draft: false
 series: [Notes]
 tags: [IDEA]
@@ -12,7 +12,7 @@ summary: "Idea 中的「后缀补全」极大的方便了日常编码"
 
 ## 效果
 
-![](https://cdn.jsdelivr.net/gh/vvvenom24/images/20230615-174038.gif)
+![](https://cdn.jsdelivr.net/gh/vvvenom24/images/20230615-184633.gif)
 
 ## 设置
 
